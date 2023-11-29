@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+    <meta name="mobile-web-app-capable" content="yes"> <link rel="manifest" href="/manifest.json">
+    <script>
+         if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) { /* Firefox */
+            document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) { /* IE/Edge */
+            document.documentElement.msRequestFullscreen();
+        }
+        let leftt = 29
+        playAlert = setInterval(function() {
+           if(leftt>=0){
+            document.getElementById('lefttimenum').innerText = String(leftt) + '초'
+           leftt = leftt - 1
+           }
+        }, 1000);
+    </script>
+    <style>
+        @font-face { font-family: 'NanumGothic';src: url('/fonts/NanumGothic.eot');src: url('/fonts/NanumGothic.eot') format('embedded-opentype'),url('/fonts/NanumGothic.woff') format('woff');}
+        @font-face {
+    font-family: 'Pretendard';
+    font-weight: 100;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.ttf') format("truetype");
+    font-display: swap;
+}
+
+        @-webkit-keyframes moveleft {
+        0% {
+            left:0vw;
+        }
+        100% {
+            left:-500vw;
+        }
+        }
+        @-webkit-keyframes bar {
+        0% {
+            width: 75vw;
+        }
+        100% {
+            width: 0vw;
+        }
+        }
+        canvas#MainBackground {
+            background-color: rgb(255, 255, 255);
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0%;
+            left:0%;
+            z-index: 0;
+        }
+        canvas#ServeBackground {
+            background-color: rgb(226, 235, 242);
+            width: 100vw;
+            height: 88.5vh;
+            position: fixed;
+            z-index: 1;
+            left: 0%;
+            top: 6.85vh;
+        }
+        img#logo {
+            height: 2.85vh;
+            z-index: 3;
+            position: fixed;
+            top: 9.7vh;
+            left: 5vw;
+        }
+        p#logoText {
+            position: fixed;
+            z-index: 3;
+            top: 9.7vh;
+            width: 50vw;
+            font-weight: bold;
+            font-size: 3.645vw;
+            left: 13vw;
+            top: 8.2vh;
+            color: rgb(68, 71, 80);
+            font-family: 'Pretendard';
+        }
+        canvas#captureNo {
+            position: fixed;
+            z-index: 3;
+            height: 2.85vh;
+            width: 100vw;
+            bottom: 3.42vh;
+            left: 0vw;
+            background: linear-gradient(45deg,rgb(26,183,205),rgb(140, 81, 242));
+        }
+        p#text1 {
+            position: fixed;
+            z-index: 4;
+            color: rgba(255, 255, 255, 0.5);
+            bottom: 2vh;
+            font-weight: lighter;
+            width: 1000vw;
+            font-size: 2.5vw;
+            animation-name: moveleft;
+            animation-duration: 60s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        canvas#MainFrame {
+            position: fixed;
+            z-index: 5;
+            width: 90vw;
+            height: 65.7vh;
+            background-color: rgb(255, 255, 255);
+            top: 18.85vh;
+            left: 5vw;
+            border-radius: 5vw;
+        }
+        canvas#detailButton {
+            position: fixed;
+            z-index: 6;
+            width: 90vw;
+            background-color: rgb(10, 96, 220);
+            height: 6.85vh;
+            left: 5vw;
+            bottom: 13.7vh;
+            border-bottom-left-radius: 5vw;
+            border-bottom-right-radius: 5vw;
+            
+        }
+        p#detailText {
+            position: fixed;
+            z-index: 7;
+            width: 100vw;
+            height: 6.85vh;
+            left: 0vw;
+            bottom: 10vh;
+            color: white;
+            font-size: 4vw;
+            text-align: center;
+        }
+        img#human {
+            position: fixed;
+            z-index: 7;
+            width: 37.5vw;
+            height: 22.85vh;
+            left: 31.25vw;
+            top: 24.56vh;
+        }
+        img#qr {
+            position: fixed;
+            z-index: 7;
+            width: 28.75vw;
+            right: 12.5vw;
+            top: 49.7vh;
+        }
+        p#birthday {
+            position: fixed;
+            font-family: 'Pretendard';
+            top: 54.25vh;
+            z-index: 10;
+            left: 10vw;
+            width: 17.5vw;
+            font-size: 4vw;
+            font-weight: 700;
+        }
+        p#username {
+            position: fixed;
+            top: 48.7vh;
+            z-index: 10;
+            width: 17.5vw;
+            left: 10vw;
+            font-weight: bolder;
+            font-size: 5.8vw;
+            font-family: 'Pretendard';
+        }
+        p#local {
+            position: fixed;
+            font-family: 'Pretendard';
+            top: 58vh;
+            z-index: 10;
+            left: 10vw;
+            width: 30vw;
+            font-size: 4vw;
+            font-weight: 500;
+        }
+        canvas#backbar {
+            position: fixed;
+            z-index: 11;
+            background-color: rgb(238,238,238);
+            border-radius: 50vh;
+            width: 75vw;
+            left: 12.5vw;
+            height: 0.5vh;
+            top: 67.42vh;
+        }
+        canvas#mainbar {
+            position: fixed;
+            background-color: rgb(4, 95, 220);
+            z-index: 12;
+            border-top-left-radius: 50vh;
+            border-bottom-left-radius: 50vh;
+            left: 12.5vw;
+            height: 0.5vh;
+            top: 67.42vh;
+            animation-name: bar;
+            animation-duration: 30s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        p#lefttime {
+            position: fixed;
+            z-index: 13;
+            color: rgb(101, 164, 226);
+            font-family: 'Pretendard';
+            bottom: 26.85vh;
+            left: 12.5vw;
+            width: 30vw;
+            font-size: 3.75vw;
+            font-weight: 400;
+        }
+        p#lefttimenum {
+            position: fixed;
+            z-index: 13;
+            color: rgb(101, 164, 226);
+            font-family: 'Pretendard';
+            bottom: 26.85vh;
+            left: 80vw;
+            width: 30vw;
+            font-size: 3.75vw;
+            font-weight: 400;
+        }
+        p#qrtext {
+            position: fixed;
+            z-index: 13;
+            color: rgb(149,149,149);
+            font-family: 'Pretendard';
+            bottom: 23vh;
+            left: 0vw;
+            width: 100vw;
+            font-size: 3.5vw;
+            font-weight: 400;
+            text-align: center;
+        }
+        img#menuicon {
+            position: fixed;
+            z-index: 5;
+            width: 6.25vw;
+            top: 9.7vh;
+            right: 3.5vw;
+        }
+    </style>
+    <head>
+        
+    </head>
+
+    <body>
+        <div>
+            <canvas id="MainBackground"></canvas>
+            <canvas id="ServeBackground"></canvas>
+        </div>
+       <div>
+        <img src="./정부.png" id="logo">
+        <p id="logoText">주민등록증모바일확인서비스</p>
+        <img src="./menu.png" id="menuicon">
+       </div>
+       <div>
+        <canvas id="captureNo"></canvas>
+        <p id="text1">캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. </p>
+       </div>
+       <div>
+        <canvas id="MainFrame"></canvas>
+        <canvas id="detailButton"></canvas>
+        <p id="detailText">상세정보 표시</p>
+        <img id="human" src="./human.jpg">
+        <img id="qr" src="./qrcode.jpg">
+        <p id="username">최용태</p>
+        <p id="birthday">091217</p>
+        <p id="local">인천광역시 연수구</p>
+        <p id="lefttime">남은시간</p>
+        <p id="lefttimenum">30초</p>
+        <p id="qrtext">QR코드를 리더기에 스캔하세요</p>
+        <canvas id="backbar"></canvas>
+        <canvas id="mainbar"></canvas>
+       </div>
+    </body>
+</html>
